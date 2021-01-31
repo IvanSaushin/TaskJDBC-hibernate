@@ -45,8 +45,16 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.3.10.Final</version>
+            <version>5.4.27.Final</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>javax.xml.bind</groupId>-->
+<!--            <artifactId>jaxb-api</artifactId>-->
+<!--            <version>1.0</version>-->
+<!--        </dependency>-->
      </dependencies>
+
+
 
 </project>
