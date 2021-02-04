@@ -14,18 +14,18 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 
         // Hibernate
-        UserDaoHibernateImpl idhi = new UserDaoHibernateImpl();
+        UserServiceImpl userService = new UserServiceImpl();
 
-        idhi.dropUsersTable();
-        idhi.createUsersTable();
+        userService.dropUsersTable();
+        userService.createUsersTable();
         User user1 = new User("alex", "navalny", (byte)34);
         User user2 = new User("vacya", "guba", (byte)19);
-        idhi.saveUser(user1.getName(), user1.getLastName(), user1.getAge());
-        idhi.saveUser(user2.getName(), user2.getLastName(), user2.getAge());
+        userService.saveUser(user1.getName(), user1.getLastName(), user1.getAge());
+        userService.saveUser(user2.getName(), user2.getLastName(), user2.getAge());
 
-        idhi.removeUserById(1);
-//        idhi.cleanUsersTable();
-        List<User> list = idhi.getAllUsers();
+        userService.removeUserById(1);
+//        userService.cleanUsersTable();
+        List<User> list = userService.getAllUsers();
         list.forEach(System.out::println);
 
 
